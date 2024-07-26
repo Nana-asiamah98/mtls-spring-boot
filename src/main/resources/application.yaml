@@ -3,8 +3,8 @@ app:
   doppler:
     url: https://api.doppler.com/
     token: ${DOPPLER-TOKEN}
-    projectName: demo_1
-    configurationName: dev_mtls
+    projectName: ${DOPPLER_PROJECT_NAME}
+    configurationName: ${DOPPLER_CONFIG_NAME}
   client:
     alias-name: na-studios
     server-private-key: classpath:cert/server/mainserver.key
