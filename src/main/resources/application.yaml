@@ -1,0 +1,41 @@
+
+app:
+  doppler:
+    url: https://api.doppler.com/
+    token: dp.pt.GA3nKXCWupT9IdVVkzQr3JuMogd998HIaaSHEDVFMlB
+    projectName: demo_1
+    configurationName: dev_mtls
+  client:
+    alias-name: na-studios
+    server-private-key: classpath:cert/server/mainserver.key
+    server-pubic-key: classpath:cert/server/server.pem
+    client-private-key: classpath:cert/client/client.key
+    client-public-key: classpath:cert/client/client.pem
+    password: qwerty
+    key-store-file-name: store.jks
+    client-name: NANA
+
+
+
+#logging:
+#  level:
+#    root: trace
+
+spring:
+  application:
+    name: "MTLS - Client"
+  cloud:
+    config:
+      enabled: false
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: "jdbc:postgresql://${DB_HOST:localhost:5554}/${DB_NAME:mtlsDB}"
+    hikari:
+      username: postgres
+      password: postgres
+      schema: public
+  flyway:
+    url: ${spring.datasource.url}
+    user: ${spring.datasource.hikari.username}
+    password: ${spring.datasource.hikari.password}
+

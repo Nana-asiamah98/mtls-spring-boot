@@ -1,0 +1,1 @@
+ALTER TABLE IF EXISTS tbl_mtls ADD COLUMN IF NOT EXISTS certificate_option varchar(50) NOT NULL default 'CLIENT';

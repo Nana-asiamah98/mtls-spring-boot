@@ -1,0 +1,1 @@
+ALTER TABLE IF EXISTS tbl_mtls ADD COLUMN IF NOT EXISTS pem_paraphrase varchar(100);
