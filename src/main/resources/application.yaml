@@ -2,7 +2,7 @@
 app:
   doppler:
     url: https://api.doppler.com/
-    token: dp.pt.GA3nKXCWupT9IdVVkzQr3JuMogd998HIaaSHEDVFMlB
+    token: ${DOPPLER-TOKEN}
     projectName: demo_1
     configurationName: dev_mtls
   client:
